@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova</title>
+</head>
+<body>
+    <script>
+        let website={
+            titulo:"Sistema de avaliaçao",
+            url:"https://www.sistemaOnlineAv.com.br",
+            tags:["Biologia","História","Matemática","Português"],
+            disciplinasTecnicas:{
+                adm:["Direito do consumidor","Marketing"],
+                info:["HTML","PHP","JavaScript"],
+                enf:["saúde da mulher","Primeiros Socorros"]                
+            },
+            escola(){
+                 return 'EEEP Amélia Figueiredo';       
+        }
+    }
+
+    console.log("Título do site:",website.titulo);
+    console.log("A url do site é:",website.url);
+    console.log("A terceira disciplina do atributo tags é:",website.tags[2]);
+    console.log("O segundo curso do técnico em administração é:", website.disciplinasTecnicas.adm[1]);
+    console.log("Nome da escola:",website.escola());
+
+    </script>
+    </body>
+    </html>
