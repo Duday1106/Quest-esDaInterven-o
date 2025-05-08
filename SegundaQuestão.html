@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SegundaQuestão</title>
+</head>
+<body>
+    <script>
+        function calcularEstoqueRestante(estoqueInicial, vendasSemana) {
+    let estoqueRestante = {};
+
+    let eletronicos = Object.keys(estoqueInicial);
+
+    for (let i = 0; i < eletronicos.length; i++) {
+        let produto = eletronicos[i];
+        let vendido = vendasSemana[produto]; 
+        estoqueRestante[produto] = estoqueInicial[produto] - vendido;
+    }
+
+    return estoqueRestante;
+}
+
+let estoqueInicial = {
+    "Celular": 150,
+    "Fone de ouvido": 55,
+    "Pendrive": 37,
+    "Caixa de áudio": 28,
+    "Tablet": 32,
+    "Carregador portátil": 29
+};
+
+let vendasSemana = {
+    "Celular": 38,
+    "Fone de ouvido": 10,
+    "Pendrive": 17,
+    "Caixa de áudio": 8,
+    "Tablet": 5,
+    "Carregador portátil": 15
+};
+
+ let resultado = calcularEstoqueRestante(estoqueInicial, vendasSemana);
+ console.log("Estoque restante:");
+ console.log(resultado);
+
+        </script>
+        </body>
+        </html>
+        
+    
